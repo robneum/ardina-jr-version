@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ardina Beautiful Cleaning In The Heart Of Warsaw</title>
+  </head>
+  <body>
+    <!--
+    1. Pools
+    2. Gardens
+    3. Homes
+    4. Conference Spaces
+    5. Special Requests
+    5.1 Cleaning of a large kitchen
+    5.2 Cleaning of a basement
+    5.3 Cleaning of an old castle
+    6. Office Spaces
+   -->
+   <style>
+    .refresh {
+      max-width: 640px;
+    }
+
+    .square {
+      background-color: rgba(0,0,0,0.1);
+    }
+
+    .square .title {
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 5px;
+      font-weight: bold;
+      font-family: monospace;
+      letter-spacing: 2px;
+    }
+
+    .square img {
+      width: 140px;
+      height: 100px;
+    }
+
+    .square ul {
+      margin: 0;
+    }
+
+    .square ul li {
+      display: inline-block;
+      padding: 5px;
+      position: relative;
+    }
+
+    .square ul li:hover {
+      border: 3px solid green;
+    }
+
+    .square ul li.selected {
+      border: 3px solid green;
+    }
+
+    .square ul li .overlay, .square-mini .title {
+      display: flex;
+      position: absolute;
+      background-color: rgba(0,0,0,0.05);
+      color: white;
+      font-weight: bold;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .square-large {
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      padding: 60px 0;
+      font-family: georgia;
+      font-size: 1.6rem;
+      background-color: rgba(0,0,0,0.1);
+    }
+
+    .square-mini {
+      position: relative;
+      display: inline-block;
+
+    }
+
+    .square-mini:hover {
+      border: 3px solid green;
+    }
+
+    .square-mini.selected {
+      border: 3px solid green;
+    }
+
+    .square-mini img {
+      width: 205px;
+      height: 140px;
+    }
+
+    .squarela {
+      font-size: 1.8rem;
+      text-align: center;
+      background-color: green;
+      padding: 5px;
+      border: 3px solid darkgreen;
+      margin: 10px 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: monospace;
+    }
+
+    .summary {
+      background-color: lightblue;
+      max-width: 640px;
+      padding: 20px 0;
+    }
+
+    .summary-header {
+      padding: 10px;
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    .summary ul {
+      display: inline-block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .summary ul li {
+      display: block;
+      background-color: rgba(0,0,0,0.2);
+      padding: 10px 10px;
+      width: 90%;
+      text-align: right;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin: 10px;
+    }
+
+    .summary .form-summary {
+
+    }
+
+    .summary .form-summary form input {
+      width: 25%;
+      height: 35px;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    .summary .list .example {
+      text-decoration:line-through;
+    }
+
+   </style>
+    <div class="refresh">
+      <div class="squarela">
+        Pick the cleaning type and size.
+      </div>
+      <div class="square">
+        <div class="title">Pools</div>
+        <div class="content">
+          <ul>
+            <li>
+              <span class="overlay">Small</span>
+              <img data-name="Small Pool" src="Pictures/pool-small.jpg" alt="Picture Of A Small Pool"></li>
+            <li>
+              <span class="overlay">Medium</span>
+              <img data-name="Medium Pool" src="Pictures/pool-medium.jpg" alt="Picture Of A Medium Pool"></li>
+            <li>
+              <span class="overlay">Large</span>
+              <img data-name="Large Pool" src="Pictures/pool-large.jpg" alt="Picture Of A Large Pool"></li>
+        </ul>
+      </div>
+      </div>
+      <div class="square">
+        <div class="title">Gardens</div>
+        <div class="content">
+          <ul>
+            <li>
+              <span class="overlay">Small</span>
+              <img data-name="Small Garden" src="Pictures/garden-small.jpg" alt="Picture Of A Small Garden"></li>
+            <li>
+              <span class="overlay">Medium</span>
+              <img data-name="Medium Garden" src="Pictures/garden-medium.jpg" alt="Picture Of A Medium Garden"></li>
+            <li>
+              <span class="overlay">Large</span>
+              <img data-name="Large Garden" src="Pictures/garden-large.jpg" alt="Picture Of A Large Garden"></li>
+        </ul>
+        </div>
+      </div>
+      <div class="square">
+        <div class="title">Homes</div>
+        <div class="content">
+          <ul>
+            <li>
+              <span class="overlay">Small</span>
+              <img data-name="Small Home" src="Pictures/home-small.jpg" alt="Picture Of A Small Home"></li>
+            <li>
+              <span class="overlay">Medium</span>
+              <img data-name="Medium Home" src="Pictures/home-medium.jpg" alt="Picture Of A Medium Home"></li>
+            <li>
+              <span class="overlay">Large</span>
+              <img data-name="Large Home" src="Pictures/home-large.jpg" alt="Picture Of A Large Home"></li>
+        </ul>
+        </div>
+      </div>
+      <div class="square">
+        <div class="title">Conference Spaces</div>
+        <div class="content">
+          <ul>
+            <li>
+              <span class="overlay">Small</span>
+              <img data-name="Small Conference Space" src="Pictures/conference-small.jpg" alt="Picture Of A Small Conference"></li>
+            <li>
+              <span class="overlay">Medium</span>
+              <img data-name="Medium Conference Space" src="Pictures/conference-medium.jpg" alt="Picture Of A Medium Conference"></li>
+            <li>
+              <span class="overlay">Large</span>
+              <img data-name="Large Conference Space" src="Pictures/conference-large.jpg" alt="Picture Of A Large Conference"></li>
+        </ul>
+        </div>
+      </div>
+      <div class="square">
+        <div class="title">Office Spaces</div>
+        <div class="content">
+          <ul>
+            <li>
+              <span class="overlay">Small</span>
+              <img data-name="Small Office" src="Pictures/office-small.jpg" alt="Picture Of A Small Office"></li>
+            <li>
+              <span class="overlay">Medium</span>
+              <img data-name="Medium Office" src="Pictures/office-medium.jpg" alt="Picture Of A Medium Office"></li>
+            <li>
+              <span class="overlay">Large</span>
+              <img data-name="Large Office" src="Pictures/office-large.jpg" alt="Picture Of A Large Office"></li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="square-large">
+        <div class="title">Special Requests</div>
+        <div class="content"></div>
+      </div>
+          <div class="square-mini">
+            <div class="title">Kitchen</div>
+            <div class="content">
+              <img data-name="Kitchen" src="Pictures/kitchen.jpg" alt="Picture Of A Kitchen"></div>
+          </div>
+          <div class="square-mini">
+            <div class="title">Historic</div>
+            <div class="content">
+              <img data-name="Historic Site" src="Pictures/historic.jpg" alt="Picture Of A Historic Site">
+            </div>
+          </div>
+          <div class="square-mini">
+            <div class="title">Underground</div>
+            <div class="content">
+              <img data-name="Underground Basement" src="Pictures/basement.jpg" alt="Picture Of An Underground Basement">
+            </div>
+          </div>
+      <div class="next-panel invisible">
+        <button>Complete</button>
+      </div>
+    </div>
+    <div class="summary">
+      <div class="summary-header">
+        Picked Spaces
+      </div>
+      <div class="list">
+          <ul>
+            <li class="example">Large Office Space</li>
+            <li class="example">Medium Home</li>
+            <li class="example">Small Pool</li>
+          </ul>
+      </div>
+      <div class="form-summary">
+        <form class="infoForm">
+          <input name="name" type="text" placeholder="Name">
+          <input name="surname" type="text" placeholder="Surname">
+          <input name="number" type="number" placeholder="Phone Number">
+          <input name="email" type="email" placeholder="Email">
+          <input name="send" value="Send" type="button">
+        </form>
+      </div>
+    </div>
+    <script>
+      var spacesObject = {
+        arr:[],
+        push: function(e){
+          this.arr.push(e);
+          let list = document.querySelector(".summary .list ul");
+          let entry = document.createElement("li");
+          entry.appendChild(document.createTextNode(e));
+          list.appendChild(entry);
+        }
+      };
+      var felline = document.querySelector(".refresh").addEventListener("click", (e) => {
+        if(e.target.className == "overlay") {
+          if(e.target.parentNode.className == "selected") {
+            e.target.parentNode.className = "";
+          } else {
+            e.target.parentNode.className = "selected";
+            spacesObject.push(e.target.nextElementSibling.getAttribute("data-name"));
+          }
+
+        } else if (e.target.className == "title") {
+          if (!e.target.parentNode.className.includes("selected")) {
+            e.target.parentNode.className += " selected";
+            spacesObject.push(e.target.nextElementSibling.childNodes[0].getAttribute("data-name"));
+          }
+        }
+
+      });
+
+    </script>
+
+  </body>
+</html>
